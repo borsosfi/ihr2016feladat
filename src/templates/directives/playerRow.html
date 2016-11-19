@@ -25,8 +25,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr data-ng-class="{success: $first}" data-ng-repeat="player in players | filter:search track by $index">
-            <td>{{match.id}}</td>
+        <tr data-ng-class="{success: $first}" data-ng-repeat="player in players | filter:search track by $index ">
+            <td>{{player.id}}</td>
             <td><input type="text" data-ng-model="player.name"></td>
             <td><input type="text" data-ng-model="player.position"></td>
             <td><input type="text" data-ng-model="player.caps"></td>
@@ -41,7 +41,7 @@
     </tbody>
     <tfoot>
          <tr>
-            <th colspan="6">Összesen: {{matches.length}}</th>
+            <th colspan="6">Összesen: {{players.length}}</th>
         </tr>
     </tfoot>
 </table>
