@@ -26,7 +26,7 @@
     </thead>
     <tbody>
         <tr data-ng-class="{success: $first}" data-ng-repeat="player in players track by $index">
-            <td>{{match.id}}</td>
+            <td>{{player.id}}</td>
             <td><input type="text" data-ng-model="player.name"></td>
             <td><input type="text" data-ng-model="player.position"></td>
             <td><input type="text" data-ng-model="player.caps"></td>
