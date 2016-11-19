@@ -23,5 +23,5 @@ ihr.config(['$routeProvider', "$httpProvider", function($routeProvider, $httpPro
 }]);
 
 ihr.constant("Config", {
-    apiServer : "http://192.168.0.15:3000"
+    apiServer : "http://192.168.0.15:3000" 
 })
