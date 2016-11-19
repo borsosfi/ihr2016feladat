@@ -21,3 +21,10 @@ ihr.config(['$routeProvider', "$httpProvider", function($routeProvider, $httpPro
 ihr.constant("Config", {
     apiServer : "http://192.168.0.15:3000" 
 })
+
+ihr.filter('startFrom', function() {
+    return function(input, start) {
+        start = parseInt(start); //parse to int
+        return input.slice(start);
+    }
+});
