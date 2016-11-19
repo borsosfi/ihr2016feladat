@@ -10,15 +10,11 @@ ihr.config(['$routeProvider', "$httpProvider", function($routeProvider, $httpPro
     $routeProvider.when('/player', {
         controller: 'playerController',
         controllerAs: 'ctrl',
-        templateUrl: 'templates/player.html'
-    }).when('/register', {
-        controller: 'userController',
-        controllerAs: 'ctrl',
-        templateUrl: 'templates/register.html'
+        templateUrl: 'templates/players.html'
     }).otherwise({
-        controller: 'soccerController',
+        controller: 'playerController',
         controllerAs: 'ctrl',
-        templateUrl: 'templates/soccer.html'
+        templateUrl: 'templates/players.html'
     });
 }]);
 

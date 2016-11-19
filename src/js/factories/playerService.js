@@ -1,4 +1,4 @@
-ihr.service('playerService', ['playerFactory', function(matchFactory){
+ihr.service('playerService', ['playerFactory', function(playerFactory){
     var service = this;
     service.cache = {};
     
