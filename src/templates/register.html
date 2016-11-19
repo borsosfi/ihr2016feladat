@@ -1,0 +1,21 @@
+<div data-ng-controller="userController as ctrl">
+    <form method="get" action="/" data-ng-submit="ctrl.regUser($event)">
+        <label>Vezeték név</label>
+        <br/>
+        <input type="text" name="firstName" data-ng-model="ctrl.user.name.first">
+        <br/>
+        <label>Kereszt név</label>
+        <br/>
+        <input type="text" name="lastName" data-ng-model="ctrl.user.name.last">
+        <br/>
+        <label>Foglalkozás</label>
+        <br/>
+        <input type="text" name="lastName" data-ng-model="ctrl.user.job">
+        <br/>
+        <label>Kor</label>
+        <br/>
+        <input type="text" name="lastName" data-ng-model="ctrl.user.age">
+        <br/>
+        <input type="submit" value="Küld">
+    </form>
+</div>
