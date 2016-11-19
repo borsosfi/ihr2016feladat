@@ -7,10 +7,10 @@ ihr.config(['$routeProvider', "$httpProvider", function($routeProvider, $httpPro
     $httpProvider.defaults.withCredentials = true;
     $httpProvider.defaults.headers.common.Token = "RANDOMTOKEN";
     
-    $routeProvider.when('/soccer', {
-        controller: 'soccerController',
+    $routeProvider.when('/player', {
+        controller: 'playerController',
         controllerAs: 'ctrl',
-        templateUrl: 'templates/soccer.html'
+        templateUrl: 'templates/player.html'
     }).when('/register', {
         controller: 'userController',
         controllerAs: 'ctrl',
