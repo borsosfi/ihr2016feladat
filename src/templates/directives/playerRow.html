@@ -16,24 +16,25 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>Hazai</th>
-            <th>Vendég</th>
-            <th>Időpont</th>
-            <th>Tipus</th>
+            <th>Név</th>
+            <th>Pozíció</th>
+            <th>Meccsek</th>
+            <th>Gólok</th>
+            <th>Klub</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr data-ng-class="{success: $first}" data-ng-repeat="match in matches | filter:search track by $index">
+        <tr data-ng-class="{success: $first}" data-ng-repeat="player in players | filter:search track by $index">
             <td>{{match.id}}</td>
-            <td><input type="text" data-ng-model="match.home"></td>
-            <td><input type="text" data-ng-model="match.away"></td>
-            <td><input type="text" data-ng-model="match.when"></td>
-            <td><input type="text" data-ng-model="match.type"></td>
+            <td><input type="text" data-ng-model="player.name"></td>
+            <td><input type="text" data-ng-model="player.position"></td>
+            <td><input type="text" data-ng-model="player.caps"></td>
+            <td><input type="text" data-ng-model="player.['goals for country']"></td>
+            <td><input type="text" data-ng-model="player.club"></td>
             <td>
                 <div class="btn-group">
-                    <button class="btn btn-info" data-ng-click="updateRow(match)">Módosítás</button>
-                    <button class="btn btn-danger" data-ng-click="deleteRow(match)">Törlés</button>
+                    <button class="btn btn-info" data-ng-click="updatePlayer(player)">Módosítás</button>
                 </div>
             </td>
         </tr>
