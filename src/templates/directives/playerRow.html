@@ -1,0 +1,47 @@
+<table class="table table-striped">
+    <div class="row" data-ng-if="serverError">
+        <div class="col-xs-12">
+            <div class="alert alert-danger">
+                <strong>Hiba: </strong>{{serverError}}
+            </div>
+        </div>
+    </div>
+    <caption>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-9">
+                <input type="text" class="form-control" data-ng-model="search">
+            </div>
+        </div>
+    </caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Név</th>
+            <th>Pozíció</th>
+            <th>Meccsek</th>
+            <th>Gólok</th>
+            <th>Klub</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-class="{success: $first}" data-ng-repeat="player in players | filter:search track by $index">
+            <td>{{match.id}}</td>
+            <td><input type="text" data-ng-model="player.name"></td>
+            <td><input type="text" data-ng-model="player.position"></td>
+            <td><input type="text" data-ng-model="player.caps"></td>
+            <td><input type="text" data-ng-model="player.['goals for country']"></td>
+            <td><input type="text" data-ng-model="player.club"></td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-info" data-ng-click="updatePlayer(player)">Módosítás</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+         <tr>
+            <th colspan="6">Összesen: {{matches.length}}</th>
+        </tr>
+    </tfoot>
+</table>
