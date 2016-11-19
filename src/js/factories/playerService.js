@@ -1,6 +1,7 @@
 ihr.service('playerService', ['playerFactory', function(matchFactory){
     var service = this;
     service.cache = {};
+    service.cache.playerList = [];
     
     service.getPlayerList = function(){
         playerFactory.getPlayerList()
