@@ -7,21 +7,17 @@ ihr.config(['$routeProvider', "$httpProvider", function($routeProvider, $httpPro
     $httpProvider.defaults.withCredentials = true;
     $httpProvider.defaults.headers.common.Token = "RANDOMTOKEN";
     
-    $routeProvider.when('/soccer', {
-        controller: 'soccerController',
+    $routeProvider.when('/player', {
+        controller: 'playerController',
         controllerAs: 'ctrl',
-        templateUrl: 'templates/soccer.html'
-    }).when('/register', {
-        controller: 'userController',
-        controllerAs: 'ctrl',
-        templateUrl: 'templates/register.html'
+        templateUrl: 'templates/players.html'
     }).otherwise({
-        controller: 'soccerController',
+        controller: 'playerController',
         controllerAs: 'ctrl',
-        templateUrl: 'templates/soccer.html'
+        templateUrl: 'templates/players.html'
     });
 }]);
 
 ihr.constant("Config", {
-    apiServer : "http://192.168.0.15:3000"
+    apiServer : "http://192.168.0.15:3000" 
 })
